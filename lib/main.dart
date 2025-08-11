@@ -33,8 +33,8 @@ class HabitTrackerSplash extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF7B68EE), // Medium slate blue
-              Color(0xFF9370DB), // Medium purple
+              Color(0xFF687EEB), // Medium slate blue
+              Color(0xFF764EA6), // Medium purple
             ],
           ),
         ),
@@ -46,7 +46,7 @@ class HabitTrackerSplash extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Spacer(flex: 2),
-                
+
                 // Logo container
                 Container(
                   width: 120,
@@ -77,35 +77,36 @@ class HabitTrackerSplash extends StatelessWidget {
                     ),
                   ),
                 ),
-                
+
                 const SizedBox(height: 40),
-                
+
                 // Title
                 const Text(
                   'Habit Tracker',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 32,
+                    fontSize: 36,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
-                
+
                 const SizedBox(height: 16),
-                
+
                 // Subtitle
                 const Text(
                   'Buscando nuestra mejor versión',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 20,
                     color: Colors.white,
                     fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
-                
-                const Spacer(flex: 2),
-                
+
+                const SizedBox(height: 32),
+
                 // Quote container
                 Container(
                   width: double.infinity,
@@ -125,23 +126,23 @@ class HabitTrackerSplash extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
-                      fontStyle: FontStyle.italic,
                       height: 1.4,
                     ),
                   ),
                 ),
-                
-                const Spacer(flex: 2),
-                
+
+                const SizedBox(height: 32),
+
                 // Start button
                 SizedBox(
-                  width: double.infinity,
+                  width: double.tryParse('190'),
                   child: ElevatedButton(
                     onPressed: () {
                       // Navigate to the main app functionality
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const MyHomePage(title: 'Habit Tracker App'),
+                          builder: (context) =>
+                              const MyHomePage(title: 'Habit Tracker App'),
                         ),
                       );
                     },
@@ -150,21 +151,21 @@ class HabitTrackerSplash extends StatelessWidget {
                       foregroundColor: const Color(0xFF7B68EE),
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(30),
                       ),
-                      elevation: 0,
+                      elevation: 15,
                     ),
                     child: const Text(
                       'Comenzar',
                       style: TextStyle(
                         fontSize: 18,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w900,
                       ),
                     ),
                   ),
                 ),
-                
-                const SizedBox(height: 40),
+
+                const Spacer(flex: 2),
               ],
             ),
           ),
@@ -222,17 +223,17 @@ class _MyHomePageState extends State<MyHomePage> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF7B68EE),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 16,
+                ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
               ),
               child: const Text(
                 'Volver al Splash',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ),
           ],
